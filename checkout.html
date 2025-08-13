@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | Netway Corp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body class="font-sans antialiased bg-gray-50">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <img src="assets/netway.jpeg" alt="Netway Logo" class="h-10" />
+        </div>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="./index.html" class="text-gray-900 hover:text-blue-600">Home</a>
+          <a href="./aboutus.html" class="text-gray-900 hover:text-blue-600">About Us</a>
+          <a href="./index.html#services" class="text-gray-900 hover:text-blue-600">Services</a>
+          <a href="./index.html#contact" class="text-gray-900 hover:text-blue-600">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  
+
+  <!-- Checkout Section -->
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8">
+    <!-- Dynamic Header -->
+    <h1 id="checkout-title" class="text-3xl font-bold text-gray-900 mb-8">
+      Checkout
+    </h1>
+
+    <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Billing Details -->
+        <div class="bg-white shadow-lg rounded-xl p-8">
+          <h2 class="text-xl font-semibold text-gray-800 mb-6">Billing Details</h2>
+          
+          <form>
+            <div class="mb-4">
+              <label class="block text-gray-700 font-medium mb-2">Full Name</label>
+              <input type="text" class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600"/>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 font-medium mb-2">Email</label>
+              <input type="email" class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600"/>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 font-medium mb-2">Phone Number</label>
+              <input type="tel" class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600"/>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 font-medium mb-2">Address</label>
+              <input type="text" class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600"/>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-gray-700 font-medium mb-2">City</label>
+                <input type="text" class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600"/>
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium mb-2">Postal Code</label>
+                <input type="text" class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600"/>
+              </div>
+            </div>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">Payment Details</h2>
+            <div class="mb-4">
+              <label class="block text-gray-700 font-medium mb-2">Card Number</label>
+              <input type="text" class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600" placeholder="1234 5678 9012 3456"/>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-gray-700 font-medium mb-2">Expiry Date</label>
+                <input type="text" class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600" placeholder="MM/YY"/>
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium mb-2">CVC</label>
+                <input type="text" class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600" placeholder="123"/>
+              </div>
+            </div>
+          </form>
+        </div>
+      <!-- Order Summary -->
+      <div>
+        <div class="bg-white shadow-lg rounded-xl p-8 mb-6">
+          <h2 class="text-xl font-semibold text-gray-800 mb-6">Order Summary</h2>
+          
+          <div class="flex justify-between mb-4">
+            <span class="text-gray-700">Service</span>
+            <span id="order-name" class="font-semibold"></span>
+          </div>
+          <div class="flex justify-between mb-4">
+            <span class="text-gray-700">Price</span>
+            <span id="order-price" class="font-semibold"></span>
+          </div>
+          <div class="flex justify-between mb-4">
+            <span class="text-gray-700">Quantity</span>
+            <span class="font-semibold">1</span>
+          </div>
+          <hr class="my-4">
+          <div class="flex justify-between text-lg font-bold">
+            <span>Total</span>
+            <span id="order-total"></span>
+          </div>
+        </div>
+        
+        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition duration-300">
+          Place Order
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Script to read query params -->
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const name = urlParams.get('name') || "Custom Service";
+  const price = urlParams.get('price') || "0";
+
+  // Update header title
+  document.getElementById('checkout-title').textContent = `Checkout - ${name}`;
+
+  // Update order summary
+  document.getElementById('order-name').textContent = name;
+  document.getElementById('order-price').textContent = `EGP ${price}`;
+  document.getElementById('order-total').textContent = `EGP ${price}`;
+</script>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-8 md:mb-0">
+            <img
+              src="assets/netway.jpeg"
+              alt="Netway company logo in white"
+              class="h-12 mb-4"
+            />
+            <p class="text-gray-400 mb-4">
+              Total network solutions for the modern enterprise
+            </p>
+            <div class="flex space-x-4">
+              <!-- <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a> -->
+              <a
+                href="https://www.linkedin.com/company/netway-corp"
+                class="text-gray-400 hover:text-white"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/Netway2013/"
+                class="text-gray-400 hover:text-white"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <!-- <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-youtube"></i
+              ></a> -->
+            </div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="text-lg font-bold mb-4">Services</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Network Infrastructure</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Cybersecurity</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Cloud Networking</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Wireless Solutions</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-4">Company</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="./aboutus.html"
+                    class="text-gray-400 hover:text-white"
+                    >About Us</a
+                  >
+                </li>
+                <!-- <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Careers</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Blog</a>
+                </li> -->
+                <li>
+                  <a href="./index.html#contact" class="text-gray-400 hover:text-white">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-4">Legal</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="./privacy-policy.html"
+                    class="text-gray-400 hover:text-white"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./refund-policy.html"
+                    class="text-gray-400 hover:text-white"
+                    >Refund Policy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./shipping-policy.html"
+                    class="text-gray-400 hover:text-white"
+                    >Shipping Policy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./termsandconditions.html"
+                    class="text-gray-400 hover:text-white"
+                    >Terms of Service</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm"
+        >
+          <p>© 2023 Netway. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>

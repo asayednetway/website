@@ -1,0 +1,30 @@
+.gradient-bg {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+}
+.service-card:hover {
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+.network-topology {
+  position: relative;
+  height: 300px;
+}
+.node {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.connection {
+  position: absolute;
+  height: 3px;
+  background: rgba(59, 130, 246, 0.5);
+  transform-origin: left center;
+}

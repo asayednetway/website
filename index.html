@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netway Corp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 flex items-center">
+              <img
+                src="assets/netway.jpeg"
+                alt="Netway company logo with networking nodes symbol in blue"
+                class="h-10"
+              />
+            </div>
+          </div>
+          <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+            <a
+              href="./index.html"
+              class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >Home</a
+            >
+            <a
+              href="./aboutus.html"
+              class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >About Us</a
+            >
+            <a
+              href="./index.html#services"
+              class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >Services</a
+            >
+            <a
+              href="./index.html#clients"
+              class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >Clients</a
+            >
+            <a
+              href="./index.html#contact"
+              class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              style="outline: rgb(0, 0, 0) dotted 3px; outline-offset: 1px"
+              >Contact</a
+            >
+          </div>
+          <div class="-mr-2 flex items-center md:hidden">
+            <button
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-900 focus:outline-none"
+              onclick="toggleMenu()"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            >Services</a
+          >
+          <a
+            href="#clients"
+            class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            >Clients</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+            style="outline: rgb(0, 0, 0) dotted 3px; outline-offset: 1px"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="md:flex items-center justify-between">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+              Total Network & Software Solutions for Your Business
+            </h1>
+            <p class="text-xl mb-8">
+              Netway provides comprehensive networking solutions that keep your
+              business connected and secure in today's digital landscape.
+            </p>
+            <button
+              class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300"
+            >
+              Get Started
+            </button>
+          </div>
+          <div class="md:w-1/2 relative">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6f404f08-b88e-4934-98f0-fa87f65902a8.png"
+              alt="3D illustration of a complex enterprise network with connected devices and data flows"
+              class="rounded-lg shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">About Netway</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Delivering cutting-edge network infrastructure solutions since 2010
+          </p>
+        </div>
+        <div class="md:flex items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <div class="network-topology">
+              <div class="node" style="top: 50px; left: 100px">
+                <i class="fas fa-server"></i>
+              </div>
+              <div class="node" style="top: 30px; left: 250px">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <div class="node" style="top: 150px; left: 180px">
+                <i class="fas fa-database"></i>
+              </div>
+              <div class="node" style="top: 200px; left: 80px">
+                <i class="fas fa-desktop"></i>
+              </div>
+              <div class="node" style="top: 180px; left: 300px">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div
+                class="connection"
+                style="
+                  width: 150px;
+                  top: 70px;
+                  left: 130px;
+                  transform: rotate(15deg);
+                "
+              ></div>
+              <div
+                class="connection"
+                style="
+                  width: 120px;
+                  top: 90px;
+                  left: 180px;
+                  transform: rotate(-20deg);
+                "
+              ></div>
+              <div
+                class="connection"
+                style="
+                  width: 90px;
+                  top: 170px;
+                  left: 130px;
+                  transform: rotate(45deg);
+                "
+              ></div>
+              <div
+                class="connection"
+                style="
+                  width: 120px;
+                  top: 210px;
+                  left: 190px;
+                  transform: rotate(-30deg);
+                "
+              ></div>
+              <div
+                class="connection"
+                style="
+                  width: 100px;
+                  top: 140px;
+                  left: 270px;
+                  transform: rotate(10deg);
+                "
+              ></div>
+            </div>
+          </div>
+          <div class="md:w-1/2 md:pl-16">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Mission</h3>
+            <p class="text-gray-600 mb-6">
+              At Netway, we're dedicated to providing robust, scalable, and
+              secure network solutions that empower businesses to thrive in the
+              digital age.
+            </p>
+            <p class="text-gray-600 mb-6">
+              With over a decade of experience, our team of certified network
+              engineers delivers customized solutions tailored to your specific
+              business needs.
+            </p>
+            <div class="flex items-center mb-6">
+              <div class="flex-shrink-0 bg-blue-100 p-3 rounded-full">
+                <i class="fas fa-shield-alt text-blue-600"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-medium text-gray-900">
+                  Security First Approach
+                </h4>
+                <p class="text-gray-600">
+                  Enterprise-grade security built into every solution
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="flex-shrink-0 bg-blue-100 p-3 rounded-full">
+                <i class="fas fa-headset text-blue-600"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-medium text-gray-900">24/7 Support</h4>
+                <p class="text-gray-600">
+                  Dedicated support team available round the clock
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive solutions to meet all your networking needs
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Service 1 -->
+          <div class="bg-white rounded-xl shadow-lg p-8 service-card">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-network-wired text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Network Infrastructure
+            </h3>
+            <p class="text-gray-600">
+              Design and implementation of enterprise-grade network
+              architectures with optimal performance and reliability.
+            </p>
+            <button
+              class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-semibold"
+            >
+              Know More
+            </button>
+          </div>
+          <!-- Service 2 -->
+          <!-- <div class="bg-white rounded-xl shadow-lg p-8 service-card">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-lock text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Cybersecurity</h3>
+            <p class="text-gray-600">
+              Comprehensive security solutions including firewalls, intrusion
+              prevention, and vulnerability assessments.
+            </p>
+          </div> -->
+          <!-- Service 3 -->
+          <!-- <div class="bg-white rounded-xl shadow-lg p-8 service-card">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-cloud text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Cloud Networking
+            </h3>
+            <p class="text-gray-600">
+              Hybrid and multi-cloud solutions with optimized connectivity and
+              performance.
+            </p>
+          </div> -->
+          <!-- Service 4 -->
+          <div class="bg-white rounded-xl shadow-lg p-8 service-card">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-wifi text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Wireless Solutions
+            </h3>
+            <p class="text-gray-600">
+              Enterprise wireless networking with seamless roaming and
+              high-density capabilities.
+            </p>
+            <button
+              class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-semibold"
+            >
+              Know More
+            </button>
+          </div>
+          <!-- Service 5 -->
+          <div class="bg-white rounded-xl shadow-lg p-8 service-card">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-phone-volume text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              VoIP & Unified Comms
+            </h3>
+            <p class="text-gray-600">
+              Voice over IP solutions integrated with your network
+              infrastructure.
+            </p>
+            <button
+              class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-semibold"
+            >
+              Know More
+            </button>
+          </div>
+          <!-- Service 6 -->
+          <div class="bg-white rounded-xl shadow-lg p-8 service-card">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-tachometer-alt text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Network Maintenance
+            </h3>
+            <p class="text-gray-600">24/7 maintenance and support</p>
+            <button
+              class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-semibold"
+            >
+              Know More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Software Services + Prices Section -->
+    <section id="software-services" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Software Services & Prices
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            High-quality software development services tailored for your
+            business
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-desktop text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Custom Web Development
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Bespoke websites & web apps designed to your requirements.
+            </p>
+            <p class="text-2xl font-bold text-blue-600">EGP 5,000+</p>
+            <a href="checkout.html?name=Custom%20Web%20Development&price=5000">
+              <button
+                class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-semibold"
+              >
+                Buy Now
+              </button>
+            </a>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-mobile text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Mobile App Development
+            </h3>
+            <p class="text-gray-600 mb-4">
+              iOS & Android apps with modern UI/UX and robust functionality.
+            </p>
+            <p class="text-2xl font-bold text-blue-600">EGP8,000+</p>
+            <a href="checkout.html?name=Mobile%20App%20Development&price=8000">
+              <button
+                class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-semibold"
+              >
+                Buy Now
+              </button>
+            </a>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-layer-group text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              AI & Automation Solutions
+            </h3>
+            <p class="text-gray-600 mb-4">
+              AI-driven business tools and process automation.
+            </p>
+            <p class="text-2xl font-bold text-blue-600">EGP1,000+</p>
+            <a href="checkout.html?name=AI%20Automation&price=1000">
+              <button
+                class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-semibold"
+              >
+                Buy Now
+              </button>
+            </a>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-cart-shopping text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              E-Commerce Development
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Scalable online stores with secure payment integrations.
+            </p>
+            <p class="text-2xl font-bold text-blue-600">EGP6,000+</p>
+            <a href="checkout.html?name=Ecommerce%20Development&price=6000">
+              <button
+                class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-semibold"
+              >
+                Buy Now
+              </button>
+            </a>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-code text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              SaaS Product Development
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Cloud-based applications with subscription management.
+            </p>
+            <p class="text-2xl font-bold text-blue-600">EGP15,000+</p>
+             <a href="checkout.html?name=Sass%20Development&price=15000">
+              <button
+                class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-semibold"
+              >
+                Buy Now
+              </button>
+            </a>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-desktop text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Website Maintenance
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Ongoing support, updates, and security patches.
+            </p>
+            <p class="text-2xl font-bold text-blue-600">EGP500+/month</p>
+                         <a href="checkout.html?name=Website%20Maintenance&price=500">
+              <button
+                class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-semibold"
+              >
+                Buy Now
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Clients</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Trusted by industry leaders across multiple sectors
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow"
+          >
+            <img
+              src="assets/VXI.png"
+              alt="Logo of Fortune 500 financial services company"
+              class="h-12"
+            />
+          </div>
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow"
+          >
+            <img
+              src="assets/egypt-air.jpg"
+              alt="Logo of national healthcare provider"
+              class="h-12"
+            />
+          </div>
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow"
+          >
+            <img
+              src="assets/El_galala.png"
+              alt="Logo of global manufacturing corporation"
+              class="h-12"
+            />
+          </div>
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow"
+          >
+            <img
+              src="assets/teleperformance.png"
+              alt="Logo of education technology company"
+              class="h-20"
+            />
+          </div>
+        </div>
+        <div class="mt-16 grid md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <!-- <div class="flex items-center mb-6">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9f4e46f6-9e9f-499c-bfe3-5c09df73bac7.png"
+                alt="Portrait of satisfied CEO John Smith"
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-900">John Smith</h4>
+                <p class="text-blue-600 text-sm">CEO, Financial Corp</p>
+              </div>
+            </div> -->
+            <p class="text-gray-600 italic">
+              "Netway transformed our network infrastructure with minimal
+              downtime. Their team provided expert guidance throughout the
+              process and the results have exceeded our expectations."
+            </p>
+            <div class="mt-4 flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <!-- <div class="flex items-center mb-6">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f0a2e6c0-37ed-4eac-ba39-b5fc1aa9b67e.png"
+                alt="Portrait of IT Director Sarah Johnson"
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-900">Sarah Johnson</h4>
+                <p class="text-blue-600 text-sm">IT Director, HealthNet</p>
+              </div>
+            </div> -->
+            <p class="text-gray-600 italic">
+              "The security solutions implemented by Netway have significantly
+              reduced our vulnerability surface. Their 24/7 monitoring gives us
+              peace of mind in today's threat landscape."
+            </p>
+            <div class="mt-4 flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <!-- <div class="flex items-center mb-6">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7a0497b7-9c35-4db9-a7ba-30f339181933.png"
+                alt="Portrait of CTO Michael Chen"
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-900">Michael Chen</h4>
+                <p class="text-blue-600 text-sm">CTO, EduTech Solutions</p>
+              </div>
+            </div> -->
+            <p class="text-gray-600 italic">
+              "Migrating our services to the cloud was seamless with Netway's
+              expertise. Their team managed the entire process with
+              professionalism and exceptional technical skill."
+            </p>
+            <div class="mt-4 flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="md:flex">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+            <p class="mb-8">
+              Ready to transform your network infrastructure? Our team is
+              standing by to discuss your requirements.
+            </p>
+            <div class="mb-6 flex items-start">
+              <div class="flex-shrink-0">
+                <i class="fas fa-map-marker-alt mr-4 mt-1"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Headquarters</h4>
+                <p>51 El-Nozha<br />Al Matar, El Nozha, Cairo Governorate.</p>
+              </div>
+            </div>
+            <div class="mb-6 flex items-start">
+              <div class="flex-shrink-0">
+                <i class="fas fa-phone-alt mr-4 mt-1"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Contact</h4>
+                <p>Sales: (+20) 022911195</p>
+              </div>
+            </div>
+            <div class="mb-6 flex items-start">
+              <div class="flex-shrink-0">
+                <i class="fas fa-envelope mr-4 mt-1"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Email</h4>
+                <p>info@netway.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2 md:pl-16">
+            <form class="bg-white rounded-lg shadow-lg p-8">
+              <div class="mb-6">
+                <label for="name" class="block text-gray-700 font-bold mb-2"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                />
+              </div>
+              <div class="mb-6">
+                <label for="email" class="block text-gray-700 font-bold mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                />
+              </div>
+              <div class="mb-6">
+                <label for="phone" class="block text-gray-700 font-bold mb-2"
+                  >Phone</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                />
+              </div>
+              <div class="mb-6">
+                <label for="service" class="block text-gray-700 font-bold mb-2"
+                  >Service Interest</label
+                >
+                <select
+                  id="service"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                >
+                  <option>Network Infrastructure</option>
+                  <option>Cybersecurity</option>
+                  <option>Cloud Networking</option>
+                  <option>Wireless Solutions</option>
+                  <option>VoIP & Unified Comms</option>
+                  <option>Network Monitoring</option>
+                </select>
+              </div>
+              <div class="mb-6">
+                <label for="message" class="block text-gray-700 font-bold mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-8 md:mb-0">
+            <img
+              src="assets/netway.jpeg"
+              alt="Netway company logo in white"
+              class="h-12 mb-4"
+            />
+            <p class="text-gray-400 mb-4">
+              Total network solutions for the modern enterprise
+            </p>
+            <div class="flex space-x-4">
+              <!-- <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a> -->
+              <a
+                href="https://www.linkedin.com/company/netway-corp"
+                class="text-gray-400 hover:text-white"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/Netway2013/"
+                class="text-gray-400 hover:text-white"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <!-- <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-youtube"></i
+              ></a> -->
+            </div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="text-lg font-bold mb-4">Services</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Network Infrastructure</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Cybersecurity</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Cloud Networking</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Wireless Solutions</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-4">Company</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="./aboutus.html"
+                    class="text-gray-400 hover:text-white"
+                    >About Us</a
+                  >
+                </li>
+                <!-- <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Careers</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Blog</a>
+                </li> -->
+                <li>
+                  <a
+                    href="./index.html#contact"
+                    class="text-gray-400 hover:text-white"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-4">Legal</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="./privacy-policy.html"
+                    class="text-gray-400 hover:text-white"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./refund-policy.html"
+                    class="text-gray-400 hover:text-white"
+                    >Refund Policy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./shipping-policy.html"
+                    class="text-gray-400 hover:text-white"
+                    >Shipping Policy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./termsandconditions.html"
+                    class="text-gray-400 hover:text-white"
+                    >Terms of Service</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm"
+        >
+          <p>© 2023 Netway. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
